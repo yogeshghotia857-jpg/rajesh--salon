@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserve your premium grooming appointment at Royal Salon.">
+    <title>Book Appointment | Royal Salon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root{--black:#080808;--ink:#101010;--panel:#151515;--gold:#d4af37;--gold-light:#f5d76e;--white:#fff;--muted:#999;--line:rgba(255,255,255,.13);--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--black);color:var(--white);font-family:var(--sans);margin:0;min-height:100vh;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.topbar{align-items:center;background:rgba(8,8,8,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);display:flex;height:76px;justify-content:space-between;padding:0 clamp(22px,6vw,90px);position:sticky;top:0;z-index:5}.brand{align-items:center;display:flex;gap:11px;letter-spacing:.08em;text-transform:uppercase}.brand-mark{align-items:center;border:1px solid var(--gold);color:var(--gold);display:flex;font-family:var(--serif);font-size:13px;height:34px;justify-content:center;transform:rotate(45deg);width:34px}.brand-name{display:flex;flex-direction:column;font-size:15px;line-height:1}.brand-name small{color:var(--muted);font-size:9px;letter-spacing:.28em;margin-top:5px}.back-link{border:1px solid var(--line);color:#ccc;font-size:11px;letter-spacing:.1em;padding:11px 16px;text-transform:uppercase;transition:.25s}.back-link:hover{border-color:var(--gold);color:var(--gold)}.page{padding:clamp(45px,7vw,100px) 24px}.booking-layout{display:grid;gap:22px;grid-template-columns:minmax(280px,.82fr) minmax(400px,1.18fr);margin:auto;max-width:1250px}.intro-panel{background:linear-gradient(155deg,#262015,#121212 68%);min-height:720px;overflow:hidden;padding:clamp(34px,5vw,65px);position:relative}.intro-panel::after{background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 62%);content:'';inset:0;position:absolute}.intro-photo{height:100%;inset:0;object-fit:cover;opacity:.4;position:absolute}.intro-content{position:relative;z-index:1}.eyebrow{color:var(--gold);font-size:10px;font-weight:700;letter-spacing:.27em;line-height:1.5;text-transform:uppercase}.intro-panel h1{font-family:var(--serif);font-size:clamp(48px,6vw,82px);font-weight:500;letter-spacing:-.05em;line-height:.95;margin:28px 0}.intro-panel h1 em,.booking-heading em{color:var(--gold);font-style:normal}.intro-copy{color:#c2c2c2;font-size:15px;line-height:1.8;max-width:380px}.feature-list{bottom:55px;display:grid;gap:19px;left:clamp(34px,5vw,65px);position:absolute;right:clamp(34px,5vw,65px);z-index:1}.feature{align-items:center;border-top:1px solid rgba(255,255,255,.2);display:flex;gap:15px;padding-top:14px}.feature-icon{align-items:center;border:1px solid rgba(212,175,55,.55);color:var(--gold);display:flex;font-size:15px;height:31px;justify-content:center;width:31px}.feature p{color:#ddd;font-size:12px;letter-spacing:.04em;margin:0}.form-panel{background:rgba(21,21,21,.9);border:1px solid var(--line);padding:clamp(30px,5vw,65px);position:relative}.form-panel::before{background:var(--gold);content:'';height:1px;left:0;position:absolute;top:-1px;width:100px}.booking-heading{font-family:var(--serif);font-size:clamp(39px,4vw,59px);font-weight:500;letter-spacing:-.045em;line-height:1;margin:18px 0 13px}.subtitle{color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 34px}.non-field-errors{background:rgba(184,63,63,.12);border:1px solid rgba(232,106,106,.45);color:#ffb0a8;font-size:13px;line-height:1.6;margin-bottom:22px;padding:14px 16px}.non-field-errors ul,.errorlist{list-style:none;margin:0;padding:0}.field{margin-bottom:22px}.field label{color:#ddd;display:block;font-size:11px;font-weight:700;letter-spacing:.12em;margin-bottom:9px;text-transform:uppercase}.form-control,.field select,.field input{background:#202020;border:1px solid #383838;border-radius:0;color:#fff;min-height:54px;outline:0;padding:0 15px;transition:border-color .25s,box-shadow .25s;width:100%}.field select{appearance:auto;cursor:pointer}.field input[type=date],.field input[type=time]{color-scheme:dark}.form-control:focus,.field select:focus,.field input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.1)}.errorlist{color:#ff9d95;font-size:12px;margin-bottom:8px}.summary{background:linear-gradient(135deg,#211e13,#151515);border:1px solid rgba(212,175,55,.35);margin:30px 0 25px;padding:20px}.summary-label{color:var(--gold);font-size:9px;font-weight:700;letter-spacing:.2em;margin:0 0 13px}.summary-main{align-items:flex-start;display:flex;justify-content:space-between}.summary-name{font-family:var(--serif);font-size:25px;font-weight:500}.summary-price{color:var(--gold-light);font-size:21px;font-weight:700}.summary-meta{color:#aaa;display:flex;font-size:11px;gap:17px;margin-top:8px}.summary-meta span+span{border-left:1px solid #555;padding-left:17px}.summary-empty{color:#888;font-size:13px;margin:0}.submit-btn{background:linear-gradient(105deg,var(--gold),var(--gold-light));border:0;color:#111;cursor:pointer;font-size:12px;font-weight:700;letter-spacing:.13em;min-height:58px;text-transform:uppercase;transition:box-shadow .25s,transform .25s;width:100%}.submit-btn:hover{box-shadow:0 12px 30px rgba(212,175,55,.2);transform:translateY(-2px)}.secure{color:#666;font-size:11px;margin:17px 0 0;text-align:center}.service-data{display:none}@media(max-width:850px){.booking-layout{grid-template-columns:1fr}.intro-panel{min-height:540px}.form-panel{min-height:0}}@media(max-width:520px){.topbar{height:68px}.back-link{font-size:10px;padding:9px 11px}.page{padding:24px 14px 45px}.intro-panel{min-height:550px;padding:32px 24px}.intro-panel h1{font-size:55px}.feature-list{bottom:28px;left:24px;right:24px}.form-panel{padding:31px 20px}.booking-heading{font-size:43px}.summary-main{gap:12px}.summary-name{font-size:21px}.summary-price{font-size:18px}.submit-btn{min-height:62px}}
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="{% url 'home' %}" aria-label="Royal Salon home"><span class="brand-mark">RS</span><span class="brand-name"><strong>Royal</strong><small>Salon</small></span></a>
+        <a class="back-link" href="{% url 'home' %}">Back home <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main class="page">
+        <div class="booking-layout">
+            <section class="intro-panel">
+                <img class="intro-photo" src="{% static 'images/about.jpg' %}" alt="Royal Salon barber at work" onerror="this.onerror=null;this.src='{% static 'images/placeholder.svg' %}'">
+                <div class="intro-content"><p class="eyebrow">Royal Salon / Private Chair</p><h1>Book Your<br><em>Appointment.</em></h1><p class="intro-copy">Reserve your grooming session with Royal Salon. A considered experience, tailored to the way you want to look and feel.</p></div>
+                <div class="feature-list"><div class="feature"><span class="feature-icon"><i class="fa-solid fa-scissors" aria-hidden="true"></i></span><p>Professional Barbers</p></div><div class="feature"><span class="feature-icon"><i class="fa-solid fa-gem" aria-hidden="true"></i></span><p>Premium Products</p></div><div class="feature"><span class="feature-icon"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i></span><p>Easy Online Booking</p></div><div class="feature"><span class="feature-icon"><i class="fa-regular fa-user" aria-hidden="true"></i></span><p>Personalized Service</p></div></div>
+            </section>
+
+            <section class="form-panel">
+                <p class="eyebrow">Reserve your chair</p><h2 class="booking-heading">Book Your<br><em>Appointment</em></h2><p class="subtitle">Choose a service and a time that works for you. We will take care of the rest.</p>
+                {% if form.non_field_errors %}<div class="non-field-errors">{{ form.non_field_errors }}</div>{% endif %}
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="field">{{ form.service.errors }}<label for="{{ form.service.id_for_label }}">Select Service</label>{{ form.service }}</div>
+                    <div class="field">{{ form.date.errors }}<label for="{{ form.date.id_for_label }}">Appointment Date</label>{{ form.date }}</div>
+                    <div class="field">{{ form.time.errors }}<label for="{{ form.time.id_for_label }}">Appointment Time</label>{{ form.time }}</div>
+                    <div class="field">{{ form.phone.errors }}<label for="{{ form.phone.id_for_label }}">Phone Number</label>{{ form.phone }}</div>
+                    <div class="summary" aria-live="polite"><p class="summary-label">Selected Service</p><div class="summary-main" id="selected-summary"><p class="summary-empty">Choose a service to see its details.</p></div></div>
+                    <button type="submit" class="submit-btn">Confirm Appointment <span aria-hidden="true">→</span></button><p class="secure">Your appointment details are handled securely.</p>
+                </form>
+                <div class="service-data" aria-hidden="true">{% for service in form.service.field.queryset %}<span data-id="{{ service.id }}" data-name="{{ service.name|escape }}" data-quality="{{ service.quality|escape }}" data-price="{{ service.price }}" data-duration="{{ service.duration }}"></span>{% endfor %}</div>
+            </section>
+        </div>
+    </main>
+    <script>
+        const serviceSelect = document.querySelector('#id_service');
+        const selectedSummary = document.querySelector('#selected-summary');
+        const serviceData = [...document.querySelectorAll('.service-data span')];
+        const renderSummary = () => {
+            const selected = serviceData.find((item) => item.dataset.id === serviceSelect.value);
+            if (!selected) {
+                selectedSummary.innerHTML = '<p class="summary-empty">Choose a service to see its details.</p>';
+                return;
+            }
+            selectedSummary.innerHTML = `<div><p class="summary-name">${selected.dataset.name}</p><div class="summary-meta"><span>${selected.dataset.quality} Quality</span><span>${selected.dataset.duration} Minutes</span></div></div><strong class="summary-price">₹${selected.dataset.price}</strong>`;
+        };
+        serviceSelect?.addEventListener('change', renderSummary);
+        renderSummary();
+    </script>
+</body>
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Account | Royal Salon</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(212,175,55,.15),
+                    transparent 35%
+                ),
+                #090909;
+
+            color: white;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 1050px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            background: #121212;
+
+            border: 1px solid #303030;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 25px 80px rgba(0,0,0,.45);
+        }
+
+        /* ================= LEFT ================= */
+
+        .brand {
+            padding: 60px 50px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #181818,
+                    #0d0d0d
+                );
+
+            border-right: 1px solid #292929;
+        }
+
+        .logo {
+            color: #d4af37;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 70px;
+        }
+
+        .tag {
+            color: #d4af37;
+
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+        }
+
+        .brand h1 {
+            font-size: clamp(40px, 5vw, 62px);
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+        .brand h1 span {
+            color: #d4af37;
+        }
+
+        .brand p {
+            color: #888;
+
+            line-height: 1.8;
+
+            max-width: 450px;
+        }
+
+        .features {
+            margin-top: 35px;
+
+            display: grid;
+
+            gap: 15px;
+        }
+
+        .feature {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: #aaa;
+
+            font-size: 14px;
+        }
+
+        .feature-icon {
+            width: 35px;
+            height: 35px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background:
+                rgba(212,175,55,.1);
+
+            border:
+                1px solid
+                rgba(212,175,55,.25);
+
+            border-radius: 8px;
+        }
+
+        /* ================= REGISTER ================= */
+
+        .register-area {
+            padding: 55px 45px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .register-area h2 {
+            font-size: 32px;
+
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #777;
+
+            margin-bottom: 28px;
+
+            line-height: 1.6;
+        }
+
+        /* ================= DJANGO ERRORS ================= */
+
+        .error-box {
+            background:
+                rgba(239,68,68,.1);
+
+            border:
+                1px solid
+                rgba(239,68,68,.3);
+
+            color: #f87171;
+
+            padding: 14px;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+        .errorlist {
+            list-style: none;
+
+            color: #f87171;
+
+            font-size: 12px;
+
+            margin-top: 7px;
+        }
+
+        /* ================= FORM ================= */
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        .field label {
+            display: block;
+
+            color: #ddd;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+        .field input {
+            width: 100%;
+
+            min-height: 51px;
+
+            padding: 0 15px;
+
+            background: #202020;
+
+            border:
+                1px solid #353535;
+
+            border-radius: 9px;
+
+            color: white;
+
+            outline: none;
+
+            font-size: 15px;
+
+            transition: .25s;
+        }
+
+        .field input:focus {
+            border-color: #d4af37;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(212,175,55,.08);
+        }
+
+        .help {
+            display: block;
+
+            color: #666;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+
+            margin-top: 6px;
+        }
+
+        /* ================= BUTTON ================= */
+
+        .register-btn {
+            width: 100%;
+
+            min-height: 54px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #d4af37,
+                    #f3d36a
+                );
+
+            color: #111;
+
+            font-size: 16px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+            margin-top: 5px;
+        }
+
+        .register-btn:hover {
+            background: white;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(212,175,55,.15);
+        }
+
+        /* ================= LINKS ================= */
+
+        .login-text {
+            text-align: center;
+
+            color: #777;
+
+            font-size: 14px;
+
+            margin-top: 24px;
+        }
+
+        .login-text a {
+            color: #d4af37;
+
+            text-decoration: none;
+
+            font-weight: 700;
+        }
+
+        .login-text a:hover {
+            color: white;
+        }
+
+        .home-link {
+            display: block;
+
+            text-align: center;
+
+            margin-top: 15px;
+
+            color: #666;
+
+            font-size: 13px;
+
+            text-decoration: none;
+        }
+
+        .home-link:hover {
+            color: #d4af37;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .page {
+                grid-template-columns: 1fr;
+            }
+
+            .brand {
+                padding: 35px 25px;
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid #292929;
+            }
+
+            .logo {
+                margin-bottom: 35px;
+            }
+
+            .brand h1 {
+                font-size: 42px;
+            }
+
+            .features {
+                display: none;
+            }
+
+            .register-area {
+                padding: 35px 25px;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .page {
+                border-radius: 16px;
+            }
+
+            .brand {
+                padding: 30px 20px;
+            }
+
+            .register-area {
+                padding: 30px 20px;
+            }
+
+            .brand h1 {
+                font-size: 36px;
+            }
+
+            .register-area h2 {
+                font-size: 27px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="page">
+
+
+        <!-- ================= BRAND ================= -->
+
+        <section class="brand">
+
+            <div class="logo">
+                ✂️ Royal Salon
+            </div>
+
+            <div class="tag">
+                Premium Grooming Experience
+            </div>
+
+            <h1>
+                Join<br>
+                <span>Royal Salon.</span>
+            </h1>
+
+            <p>
+                Create your account and start booking
+                professional grooming services with ease.
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ✂️
+                    </div>
+
+                    Premium Grooming
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📅
+                    </div>
+
+                    Easy Booking
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🔒
+                    </div>
+
+                    Secure Account
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REGISTER ================= -->
+
+        <section class="register-area">
+
+            <h2>
+                Create Account
+            </h2>
+
+            <p class="subtitle">
+                Create your account to book an appointment.
+            </p>
+
+
+            {% if form.non_field_errors %}
+
+                <div class="error-box">
+
+                    {{ form.non_field_errors }}
+
+                </div>
+
+            {% endif %}
+
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+
+                <!-- USERNAME -->
+
+                <div class="field">
+
+                    <label
+                        for="{{ form.username.id_for_label }}"
+                    >
+                        Username
+                    </label>
+
+                    {{ form.username }}
+
+                    {{ form.username.errors }}
+
+                    {% if form.username.help_text %}
+
+                        <small class="help">
+                            {{ form.username.help_text }}
+                        </small>
+
+                    {% endif %}
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="field">
+
+                    <label
+                        for="{{ form.password1.id_for_label }}"
+                    >
+                        Password
+                    </label>
+
+                    {{ form.password1 }}
+
+                    {{ form.password1.errors }}
+
+                    {% if form.password1.help_text %}
+
+                        <small class="help">
+                            {{ form.password1.help_text }}
+                        </small>
+
+                    {% endif %}
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="field">
+
+                    <label
+                        for="{{ form.password2.id_for_label }}"
+                    >
+                        Confirm Password
+                    </label>
+
+                    {{ form.password2 }}
+
+                    {{ form.password2.errors }}
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="register-btn"
+                >
+                    Create Account →
+                </button>
+
+            </form>
+
+
+            <div class="login-text">
+
+                Already have an account?
+
+                <a href="/login/">
+                    Sign In
+                </a>
+
+            </div>
+
+
+            <a
+                href="/"
+                class="home-link"
+            >
+                ← Back to Home
+            </a>
+
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>
