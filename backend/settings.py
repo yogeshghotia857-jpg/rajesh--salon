@@ -16,7 +16,12 @@ SECRET_KEY = "django-insecure-salon-booking-project-key-2026"
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "rajesh--salon.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
+
 
 
 # =========================================================
